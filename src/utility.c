@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "../inc/utility.h"
+#include "utility.h"
 
 void bytes2md5(const char *data, int len, char *md5buf);
 

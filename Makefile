@@ -1,6 +1,6 @@
 #Compiler options
 CC=gcc
-CFLAGS= -Wall -pedantic
+CFLAGS= -Wall -pedantic -Iinc
 
 #Linker options
 LFLAGS = -lssl -lcrypto -lpthread
@@ -19,6 +19,7 @@ $(TARGET): main.o user.o dict.o fdata.o password.o threads.o utility.o
 			$(OBJ)utility.o $(LFLAGS) -o $(TARGET)
 
 main.o: $(SRC)main.c
+	mkdir obj && \
 	$(CC) $(CFLAGS) -c $(SRC)main.c -o $(OBJ)main.o
 
 user.o: $(SRC)user.c $(INC)user.h
@@ -40,4 +41,4 @@ utility.o: $(SRC)utility.c $(INC)utility.h
 	$(CC) $(CFLAGS) -c $(SRC)utility.c -o $(OBJ)utility.o
 
 clean:
-	rm $(OBJ)*.o $(TARGET)
+	rm -r $(OBJ) $(TARGET)

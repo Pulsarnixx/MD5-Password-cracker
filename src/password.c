@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "../inc/password.h"
-#include "../inc/utility.h"
+#include "password.h"
+#include "utility.h"
 
 //Forward declaretion
 void bytes2md5(const char *data, int len, char *md5buf);

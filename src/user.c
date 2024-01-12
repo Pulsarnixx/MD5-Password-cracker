@@ -1,4 +1,4 @@
-#include "../inc/user.h"
+#include "user.h"
 
 #include <string.h>
 #include <stdlib.h>

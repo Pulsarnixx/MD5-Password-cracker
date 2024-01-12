@@ -1,4 +1,4 @@
-#include "../inc/dict.h"
+#include "dict.h"
 
 #include <string.h>
 #include <stdlib.h>
@@ -6,10 +6,9 @@
 DictData* ReadDict(const char* file_name, size_t * size_buffer){
 
     FILE *file = fopen(file_name,"r");
-    if(file == NULL)
-        return NULL;
+    if(file == NULL) return NULL;
 
-    //Calc lines
+    //Calculate lines
     char c = 'A';
     unsigned int counter = 1;
 
@@ -54,6 +53,7 @@ DictData* ReadDict(const char* file_name, size_t * size_buffer){
 }
 
 void ShowDict(DictData* dict, size_t size){
+
     if(dict != NULL){
         while(size){
             printf("%s : %d\n",dict->word,dict->checked);

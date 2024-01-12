@@ -1,5 +1,5 @@
-#include "../inc/fdata.h"
-#include "../inc/hash.h"
+#include "fdata.h"
+#include "hash.h"
 
 #include <time.h>
 #include <string.h>
